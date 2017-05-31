@@ -7,9 +7,21 @@ using System.Threading.Tasks;
 namespace MeuIntParse
 {
     class Program
-    {
-        static void Main(string[] args)
-        {
-        }
+    {      
+             public static void Main(string[] args)
+             {
+	             Console.WriteLine(2 * MeuIntParse(Console.ReadLine()));
+             }
+             public static int MeuIntParse(string nroComoStr)
+             {
+	            
+                int i;
+                 
+                Console.WriteLine 
+
+
+             
+
+             }
     }
 }
