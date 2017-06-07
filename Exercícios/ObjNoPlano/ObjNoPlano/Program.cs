@@ -10,7 +10,13 @@ namespace ObjNoPlano
     {
         static void Main(string[] args)
         {
-            int a = 800, l = 600, x, y;
+            int a = 800, l = 600, x, y,raio;
+
+            Console.WriteLine("Escreva A");
+            a = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Escreva L");
+            l = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Escreva X");
             x = int.Parse(Console.ReadLine());
@@ -18,16 +24,22 @@ namespace ObjNoPlano
             Console.WriteLine("Escreva Y");
             y = int.Parse(Console.ReadLine());
 
-            Obj obj = new Obj();
-
+            Console.WriteLine("Escreva o raio");
+            raio = int.Parse(Console.ReadLine());
+            
+            Circulo obj = new Circulo();
+            
+            obj.raio = raio;
             obj.x = x;
             obj.y = y;
 
+            Console.WriteLine("Insira o comando: ");
+            ConsoleKey comando = Console.ReadKey().Key;
+
             do
             {
-                Console.WriteLine("Insira o comando: ");
-                ConsoleKey comando = Console.ReadKey().Key;
-
+                
+                
                 if (comando == ConsoleKey.RightArrow)
                 {
                     obj.Direita();
@@ -43,11 +55,26 @@ namespace ObjNoPlano
                     obj.Cima();
                 }
 
-                else
+                else if (comando == ConsoleKey.DownArrow)
                 {
                     obj.Baixo();
                 }
+                else if (comando == ConsoleKey.Escape)
+                {
+                    break;
+                }
+                
+                if (obj.x > 800)
+                {
+                    obj.x = 800;
+                }
 
+                else if (obj.y > 600)
+                {
+                    obj.y = 600;
+                }
+                              
+                
                 Console.WriteLine(obj.Coordenadas());
                 }
 

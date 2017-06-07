@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObjNoPlano
+namespace Obj_no_plano_2_parte
 {
-    class Obj
+    class Obj2
     {
         public int x = 0, y = 0;
 
@@ -34,6 +34,5 @@ namespace ObjNoPlano
         {
             return String.Format("({0},{1})", x, y);
         }
-        
     }
 }
