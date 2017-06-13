@@ -19,14 +19,16 @@ namespace Obj_no_plano_2_parte
             Console.WriteLine("Escreva Y");
             y = int.Parse(Console.ReadLine());
 
-            Obj obj = new Obj();
+            Obj2 obj = new Obj2();
 
             obj.x = x;
             obj.y = y;
 
+            Console.WriteLine("Insira o comando: ");
+
             do
             {
-                Console.WriteLine("Insira o comando: ");
+                
                 ConsoleKey comando = Console.ReadKey().Key;
 
                 if (comando == ConsoleKey.RightArrow)
@@ -44,15 +46,46 @@ namespace Obj_no_plano_2_parte
                     obj.Cima();
                 }
 
-                else
+                else if (comando == ConsoleKey.DownArrow)
                 {
                     obj.Baixo();
+                }
+
+                else if (comando == ConsoleKey.Escape)
+                {
+                    break;
+                }
+
+                if (obj.x > 800)
+                {
+                    obj.x = 800;
+                }
+
+                if (obj.x < 0)
+                {
+                    obj.x = 0;
+                }
+
+                if (obj.y > 600)
+                {
+                    obj.y = 600;
+                }
+
+                if (obj.y < 0)
+                {
+                    obj.y = 0;
                 }
 
                 Console.WriteLine(obj.Coordenadas());
             }
 
             while (true);
+
+            Console.WriteLine(obj.circulo());
+
+            Bitmap myBitmap = new Bitmap(@"C:\meusdeuses.jpg");
+            Graphics g = Graphics.FromImage(myBitmap);
+
         }
     }
 }
