@@ -15,10 +15,17 @@ namespace MeuIntParse
              public static int MeuIntParse(string nroComoStr)
              {
 	            
-                int i;
-                 
-                Console.WriteLine 
+                int multiply = 1;
+                int tot = 0;
 
+                for (int i = numerostring.Length - 1; i >= 0; i--)
+                {
+                    tot += (numerostring[i] - '0') * multiply;
+
+                    multiply *= 10;
+                }
+
+                return tot;
 
              
 
