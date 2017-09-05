@@ -11,25 +11,25 @@ namespace _3_Temperatura
         static void Main(string[] args)
         {
             double tempc;
-            string  tempdif;
+            string  t;
 
-            
+            Conversor Conversão = new Conversor();
 
             Console.WriteLine("Informe a tempeatura");
             tempc = double.Parse(Console.ReadLine());
 
-            Conversor Conversão = new Conversor();
+            Console.WriteLine("Digite para qual você quer converter: F de Fahrenheit ou K de Kelvin");
+            t = Console.ReadLine();
 
-            Console.WriteLine("Digite para qual você quer converter");
-            tempdif = Console.ReadLine();
+            tempc.c = cel;
 
-            if (tempdif == "kelvin")
+            if (t == "F")
             {
-               
+                Console.WriteLine("\n" + tempc.paraF(tempc.f));
             }
             else
             {
-
+                Console.WriteLine("\n" + tempc.paraK(tempc.k));
             }
             
 
