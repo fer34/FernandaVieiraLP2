@@ -28,7 +28,7 @@ namespace _04_CodigoMorse
                     Console.WriteLine(morse.Codificar());
                 }
                 if (escolha == "2")
-                {
+                {                   
                     Console.WriteLine(morse.Decodificar());
                 }
                 if (escolha == "3")
