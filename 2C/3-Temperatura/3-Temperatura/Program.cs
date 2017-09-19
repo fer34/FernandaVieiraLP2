@@ -10,28 +10,30 @@ namespace _3_Temperatura
     {
         static void Main(string[] args)
         {
-            double tempc;
-            string  t;
+            double cel = 0;
+            string t;
 
-            Conversor Conversão = new Conversor();
+            Conversor temp = new Conversor();
 
-            Console.WriteLine("Informe a tempeatura");
-            tempc = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("Digite para qual você quer converter: F de Fahrenheit ou K de Kelvin");
+            Console.WriteLine("Informe a temperatura desejada para conversão:F para fahrenheit ou K para kelvin");
             t = Console.ReadLine();
 
-            tempc.c = cel;
+            Console.WriteLine("Informe a temperatura em celsius");
+            cel = double.Parse(Console.ReadLine());
+
+            temp.cels = cel;
 
             if (t == "F")
             {
-                Console.WriteLine("\n" + tempc.paraF(tempc.f));
+                Console.WriteLine("\n" + temp.paraF(temp.far));
             }
+
             else
             {
-                Console.WriteLine("\n" + tempc.paraK(tempc.k));
+                Console.WriteLine("\n" + temp.paraK(temp.kel));
             }
-            
+
 
 
 

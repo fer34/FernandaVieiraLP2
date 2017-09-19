@@ -8,15 +8,16 @@ namespace _3_Temperatura
 {
     class Conversor
     {
-        public double c, f, k;
+        public double cels, far, kel;
 
         public double paraF(double cel)
         {
-            return f = (c * 1.8) + 32;
+            return far = (cels * 1.8) + 32;
         }
+
         public double paraK(double cel)
         {
-            return k = c - 273;
+            return kel = cels + 273;
         }
 
     }
