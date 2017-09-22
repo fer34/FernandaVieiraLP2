@@ -10,12 +10,13 @@ namespace _5_Produtos
     {
         static void Main(string[] args)
         {
-            Produto p = new Produto(1, "cajuzinho 20g", 0.50);
-            p.Reposiçao(40);
-            p.Retirada(10);
+            Produto c = new Produto(1, "presunto peça 100g", 5.00);
+            c.reposi(200);
+            c.reti(30);
+            Console.WriteLine(c.Imprimir());
 
-            Console.WriteLine(p.Imprimir());
-            //p.retirada 90      //I WANNA make love In THE CLUB TANANANA IN THE CLUB TURURU 'V' HEY TUTUTU HEY, HEY, HEY 'V'/
+            Console.ReadLine();
+
         }
     }
 }

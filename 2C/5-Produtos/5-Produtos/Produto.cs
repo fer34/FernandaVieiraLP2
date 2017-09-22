@@ -9,37 +9,39 @@ namespace _5_Produtos
     class Produto
     {
         private int id;
-        private int id { get { return id; } }
-
-        private int quantidade;
-
-        private int Quantidade { get { return quantidade; } }
-
-        public double Preco { get; set; }
+        public int Id { get { return id; } }
 
         private string nome;
-        public string nome { get { return nome; } }
+        public string Nome { get { return Nome; } }
 
-        public int Repor(int qtd)
+        private double preco;
+        public double Preco { get { return Preco; } }
+
+        private int qtd;
+        public int Qtd  { get { return qtd; } }
+
+        public Produto(int id, string nome, double preco)
         {
-            this.quantidade += qtd;
-
-            return this.quantidade;
+            this.id = id;
+            this.nome = nome;
+            this.preco = preco;
         }
 
-        public void Retirar(int qtd)
+        public void reposi(int qtd)
         {
-            if(this.quantidade >= qtd)
-            {
-                this.quantidade -= qtd;
-            }
+            this.qtd += qtd;
+        }
+        public void reti(int quant)
+        {
+            if (this.Qtd >= qtd) { this.qtd -= quant; }
+            else
+                throw new Exception();
+        }
+        public string Imprimir()
+        {
+            return string.Format("{0}, {1}, {2:00.00}", id, nome, preco);
         }
 
-        else
-    {
-        thorw new expection
+
     }
-        
-
-    
 }
