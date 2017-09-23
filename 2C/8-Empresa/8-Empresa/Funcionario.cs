@@ -8,12 +8,19 @@ namespace _8_Empresa
 {
     class Funcionario
     {
-        public int nRegistro { get; set; }
-        public int Nsetor { get; set; }
+        public string reg { get; set; }
         public string nome { get; set; }
-        public string CPF { get; set; }
-        public string email { get; set; }
-        public double salario { get; set; }
+        public string cpf { get; set; }
+        public string mail { get; set; }
+        public double sal { get; set; }
+        public Funcionario(string reg, string nome, string cpf, string mail, double sal)
+        {
+            this.reg = reg;
+            this.nome = nome;
+            this.cpf = cpf;
+            this.mail = mail;
+            this.sal = sal;
+        }
 
 
 
