@@ -26,29 +26,36 @@ namespace Aula3
 
             SqlCommand cmd = new SqlCommand()
             {
-
-                Connection = new SqlConnection("Data Source=localhost; Initial Catalog=Aula3; Integrated Security=SSPI;"),
-
-
-               /* CommandText = string.Format(@"INSERT
-                                              INTO CARRO
-                                              VALUES ('{0}','{1}','{2}',{3},{4});", modelo, cor, placa, pot, ano)*/
-
+                Connection = new SqlConnection("Data Source=localhost; Initial Catalog=Aula3; Integrated Security=SSPI;"),  
                 CommandText = @"select id,modelo,cor
                                FROM carro;"
-                                              
             };
 
-            try
-            {
+
                 cmd.Connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.HasRows())
+                {
+                    while (Reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        string modelo = reader.GetString(1);
+                        string cor = reader.GetString(2);
+                        double placa = reader.GetString(3);
+                        int pot = reader.GetString(4);
+                        int ano = reader.GetString(5);
+
+                       
+                    }
+                    Console.WriteLine("\nForam encontrados {0} registros.\n\n");
+                }
+                else
+                {
+                    Console.WriteLine("Não foram encontraodos registros de professores.");
+                }
+            
                 cmd.Connection.Close();
-            }
-            catch(Exception e)
-            {
-                Console.Write("not");
-            }
+     
          
 
         }
