@@ -47,7 +47,7 @@ namespace Aula3
 
                        
                     }
-                    Console.WriteLine("\nForam encontrados {0} registros.\n\n");
+                   
                 }
                 else
                 {
