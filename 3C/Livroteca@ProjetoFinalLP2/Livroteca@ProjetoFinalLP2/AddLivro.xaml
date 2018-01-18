@@ -1,0 +1,19 @@
+﻿<Window x:Class="Livroteca_ProjetoFinalLP2.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Livroteca_ProjetoFinalLP2"
+        mc:Ignorable="d"
+        Title="Adicionar livro" Height="300" Width="300">
+    <Grid Margin="0,0,-8,-3">
+        <TextBlock HorizontalAlignment="Left" Margin="10,69,0,0" TextWrapping="Wrap" Text="Título" VerticalAlignment="Top" RenderTransformOrigin="0.111,0.807"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,134,0,0" TextWrapping="Wrap" Text="Editora" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,201,0,0" TextWrapping="Wrap" Text="Quantidade" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="64,10,0,0" TextWrapping="Wrap" Text="Adicionar Livro" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,222,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
