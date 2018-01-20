@@ -30,7 +30,7 @@ namespace Livroteca_ProjetoFinalLP2
             // String de conexao com o BD
             SqlCommand cmd = new SqlCommand()
             {
-                Connection = new SqlConnection(@"Data Source=(localdb)\higa_sqlserver;Initial Catalog=LivrotecaBD;Integrated Security=SSPI;")
+                Connection = new SqlConnection(@"Data Source=DESKTOP-6SPO3I6;Initial Catalog=Livroteca;Integrated Security=SSPI;")
 
             };
             // Pega o conteudo das caixas de texto, é como se fosse um Console.ReadLine();
